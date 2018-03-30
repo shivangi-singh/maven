@@ -158,7 +158,7 @@ public abstract class AbstractStringBasedModelInterpolator
                 {
                     if ( "baseUri".equals( expression ) )
                     {
-                        return projectDir.getAbsoluteFile().toURI().toString();
+                        return projectDir.getAbsoluteFile().toPath().toUri().toString();
                     }
                     return null;
                 }

@@ -1086,7 +1086,7 @@ public class PomConstructionTest
         throws Exception
     {
         PomTestWrapper pom = buildPom( "baseurl-interpolation/pom.xml" );
-        assertEquals( pom.getBasedir().toURI().toString(), pom.getValue( "properties/prop1" ).toString() );
+        assertEquals( pom.getBasedir().toPath().toUri().toString(), pom.getValue( "properties/prop1" ).toString() );
     }
 
     /* MNG-3811*/
